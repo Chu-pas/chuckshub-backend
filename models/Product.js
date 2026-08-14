@@ -21,7 +21,23 @@ const productSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  images: {
+    type: [String],
+    default: []
+  },
+  sizes: {
+    type: [String],
+    default: []
+  },
   stock: {
+    type: Number,
+    default: 0
+  },
+  rating: {
+    type: Number,
+    default: 0
+  },
+  numReviews: {
     type: Number,
     default: 0
   },
