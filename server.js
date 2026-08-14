@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const authRoutes = require('./routes/auth');
+const customerAuthRoutes = require('./routes/customerAuth');
 const productRoutes = require('./routes/products');
 const orderRoutes = require('./routes/orders');
 
@@ -20,6 +21,7 @@ mongoose.connect(process.env.MONGODB_URI)
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/customer-auth', customerAuthRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 
